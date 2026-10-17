@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Icon, Btn } from './ui'
-import { clinic, services } from '../content/chidambaram'
+import { clinic, services } from '../content/puducherry'
 
 const field =
   'w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/70 transition-all duration-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-100 focus:outline-none'
 
 const ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT || 'https://avmsmilesdental.com/api/email.php'
-const SOURCE = 'AVM Smiles Chidambaram'
+const SOURCE = 'AVM Smiles Puducherry'
 const options = [...services.map((s) => s.title), 'General Checkup']
 
 // Custom dropdown (button + listbox) with keyboard support, replaces the native <select>.

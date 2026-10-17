@@ -2,20 +2,20 @@ import { asset } from '../lib/asset'
 
 export const clinic = {
   name: 'AVM Smiles',
-  // contact details come from the Chidambaram "Contact Us" page of the client's content doc
-  phone: '+91 8071404434',
-  phoneHref: 'tel:+918071404434',
+  // contact details come from the Puducherry "Contact Us" page of the client's content doc
+  phone: '+91 8071404435',
+  phoneHref: 'tel:+918071404435',
   // TODO: confirm the WhatsApp number with the client
-  whatsappHref: 'https://wa.me/918071404434',
-  email: 'avmsmiles.chidambaram@gmail.com',
-  address: 'Door No 19A, First Floor, N Car St, Chidambaram, Tamil Nadu 608001.',
-  shortAddress: 'N Car St, Chidambaram',
+  whatsappHref: 'https://wa.me/918071404435',
+  email: 'avmsmiles.puducherry@gmail.com',
+  address: 'First Floor, Door No: 34, Maraimalai Adigal Salai, Pondicherry, Puducherry - 605001.',
+  shortAddress: 'Maraimalai Adigal Salai, Puducherry',
   hours: 'Monday - Saturday: 9:00 AM - 7:00 PM', // Contact Us page says 7 PM; the doc's footer outline says 8 PM
-  mapsHref: 'https://maps.app.goo.gl/RiWFc2Kx2v8UaMdM9',
+  mapsHref: 'https://maps.app.goo.gl/d66Xn2KXAS7VQmRG8',
   mapEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.0674630166973!2d79.69025097452487!3d11.402646347332022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54c32bb6d332e9%3A0x23790b8124594db0!2sAVMSmiles%20Dental%20Wellness%20-%20Chidambaram%20%2C%20Cuddalore!5e0!3m2!1sen!2sin!4v1792144939569!5m2!1sen!2sin',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.625136302697!2d79.81841467453184!3d11.93115523683547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361cf6cbd09d1%3A0x82e9f96fde276992!2sAVMSmiles%20Dental%20Wellness!5e0!3m2!1sen!2sin!4v1792145109865!5m2!1sen!2sin',
   // from the Contact Us page of the content doc; it gives no YouTube URL, so that icon is hidden until one is added
-  social: { facebook: 'https://www.facebook.com/smiles.chidambaram', instagram: 'https://www.instagram.com/avmsmiles.chidambaram/', youtube: '' },
+  social: { facebook: 'https://www.facebook.com/avmsmiles.puducherry', instagram: 'https://www.instagram.com/avmsmiles.puducherry/', youtube: '' },
 }
 
 export const nav = [
@@ -65,18 +65,18 @@ export const steps = [
 ]
 
 export const testimonials = [
-  'My treatment at AVM Smiles Chidambaram was handled with real care. The dentist was patient, explained every step, and made sure I stayed comfortable throughout.',
-  "I visited for a dental procedure and was genuinely impressed by the team's professionalism. Their modern equipment paired with attentive service made the experience easy.",
-  "The staff at AVM Smiles Chidambaram were friendly and clear about each stage of my treatment. The clinic was clean and comfortable, and I'd recommend it without hesitation.",
+  'AVM Smiles Puducherry was excellent from start to finish. The dentist was patient and knowledgeable, and made sure I was comfortable throughout the treatment.',
+  "I visited for a dental procedure and was impressed by the professionalism of the whole team. Modern technology combined with caring service made every visit pleasant.",
+  'My time at AVM Smiles Puducherry was excellent, with dentists who were professional and friendly and explained each phase of treatment clearly. Highly recommended for quality care.',
 ]
 
 export const faqs = [
-  ['What is the best dental clinic in Chidambaram?', 'AVM Smiles is a well-known dental clinic in Chidambaram, recognized for its skilled dentists, modern equipment, and personalized attention, offering complete dental care for individuals and families nearby.'],
-  ['Do you provide dental implants?', 'Yes, we offer dental implants for single teeth, multiple teeth, and full mouth restoration, helping restore natural appearance and function.'],
-  ['Do you offer invisible aligners?', 'Yes, we provide custom invisible aligners as a comfortable and discreet way to straighten teeth, often a good alternative to traditional braces.'],
-  ['How regularly should I visit the dentist?', 'A dental checkup every six months is advised to maintain good oral health and catch issues before they progress.'],
-  ['Is teeth whitening a safe treatment?', 'Yes, our teeth whitening procedures are carried out under expert supervision, ensuring safe, comfortable, and effective results.'],
-  ['Do you provide emergency dental services?', 'Yes, we offer emergency care for tooth pain, infections, broken teeth, and dental injuries to ease discomfort and prevent complications.'],
+  ['What is the best dental clinic in Puducherry?', 'AVM Smiles is a well-known, growing dental clinic in Puducherry recognized for its qualified dentists, modern technology, and personalized patient care for individuals and families.'],
+  ['Do you have dental implants?', 'Yes, we provide dental implants for single, multiple, and full mouth tooth replacement, restoring both function and natural appearance.'],
+  ['Are invisible aligners available?', 'Yes, we offer custom invisible aligners as a comfortable and discreet way to straighten teeth, a good alternative to traditional braces for many patients.'],
+  ['How often should I visit the dentist?', "It's recommended to have a dental checkup every six months to maintain oral health and catch problems early."],
+  ['Is teeth whitening safe?', 'Yes, professional teeth whitening is a safe and effective way to enhance your smile, performed under expert supervision for the best results.'],
+  ['Do you offer emergency dental care?', 'Yes, we provide emergency dental treatment for tooth pain, infections, broken teeth, and injuries to relieve discomfort quickly.'],
 ]
 
 export const gallerySlots = [

@@ -3,7 +3,7 @@ import { useSeo } from '../lib/seo'
 import { Navigate, useParams } from 'react-router'
 import { Icon, Btn, Reveal, A } from '../components/ui'
 import BookingForm from '../components/BookingForm'
-import { clinic, services } from '../content/chidambaram'
+import { clinic, services } from '../content/puducherry'
 import pages from '../content/services.json'
 
 // A heading (h3 or card) absorbs the paragraphs / lists that follow it, so each
@@ -234,7 +234,7 @@ export default function ServicePage({ treatment, setTreatment }) {
           </div>
           <div className="rise hidden lg:block" style={{ '--d': '300ms' }}>
             <div className="relative">
-              <img src={svc.image} alt={`${svc.title} at AVM Smiles Chidambaram`} className="aspect-[4/3] w-full rounded-[28px] object-cover shadow-[0_18px_48px_-16px_rgba(40,36,89,.45)]" />
+              <img src={svc.image} alt={`${svc.title} at AVM Smiles Puducherry`} className="aspect-[4/3] w-full rounded-[28px] object-cover shadow-[0_18px_48px_-16px_rgba(40,36,89,.45)]" />
               <span className="floaty absolute -bottom-5 left-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-[0_18px_48px_-16px_rgba(40,36,89,.35)]">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-brand-600"><Icon name={svc.icon} /></span>
                 <span className="text-sm font-semibold text-brand-900">{svc.title}</span>

@@ -1,7 +1,7 @@
 ﻿import { useEffect, useRef, useState } from 'react'
 import { asset } from '../lib/asset'
 import { Icon, Btn, A } from './ui'
-import { clinic, nav, services } from '../content/chidambaram'
+import { clinic, nav, services } from '../content/puducherry'
 
 export function TopBar() {
   return (
@@ -168,7 +168,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-brand-300 pb-24 lg:pb-5">
-        &copy; {new Date().getFullYear()} AVM Smiles Dental Clinic, Chidambaram. All rights reserved.
+        &copy; {new Date().getFullYear()} AVM Smiles Dental Clinic, Puducherry. All rights reserved.
       </div>
     </footer>
   )

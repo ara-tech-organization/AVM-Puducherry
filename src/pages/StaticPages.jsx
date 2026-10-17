@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Icon, Btn, Reveal, Photo, A } from '../components/ui'
 import BookingForm from '../components/BookingForm'
 import { Gallery as BeforeAfter } from '../components/Sections'
-import { clinic, gallerySlots } from '../content/chidambaram'
+import { clinic, gallerySlots } from '../content/puducherry'
 import { useSeo } from '../lib/seo'
 import meta from '../content/static-pages.json'
 
@@ -37,13 +37,13 @@ export function ContactPage({ treatment, setTreatment }) {
     <>
       <PageHero
         title="Contact Us"
-        text="Whether you need a routine dental checkup, cosmetic dentistry, dental implants, invisible aligners, or urgent dental care, AVM Smiles is here to assist you. Contact our team in Chidambaram to schedule your appointment and take the next step toward a healthier, brighter smile."
+        text="Whether you need a routine dental checkup, cosmetic dentistry, dental implants, invisible aligners, or urgent dental care, AVM Smiles is here to assist you. Contact our team in Puducherry to schedule your appointment and take the next step toward a healthier, brighter smile."
       />
       <section className="py-14 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <div>
             <Reveal>
-              <h2 className="text-[clamp(1.375rem,2.4vw,1.875rem)] font-semibold leading-tight text-brand-900">Book Your Dental Appointment in Chidambaram</h2>
+              <h2 className="text-[clamp(1.375rem,2.4vw,1.875rem)] font-semibold leading-tight text-brand-900">Book Your Dental Appointment in Puducherry</h2>
               <p className="mt-3 leading-relaxed text-muted">Our friendly dental team is ready to answer your questions, discuss suitable treatment options, and help you make informed decisions about your oral health.</p>
             </Reveal>
             <div className="mt-6 space-y-4">
@@ -73,9 +73,9 @@ export function ContactPage({ treatment, setTreatment }) {
         <div className="mx-auto mt-12 max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="h-96 overflow-hidden rounded-[28px] border border-line shadow-[0_18px_48px_-16px_rgba(40,36,89,.25)]">
-              <iframe title="AVM Smiles Chidambaram on Google Maps" src={clinic.mapEmbed} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="h-full w-full border-0" />
+              <iframe title="AVM Smiles Puducherry on Google Maps" src={clinic.mapEmbed} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="h-full w-full border-0" />
             </div>
-            <p className="mt-6 text-center leading-relaxed text-muted">Visit AVM Smiles in Chidambaram for comprehensive dental care tailored to your needs. We look forward to welcoming you and helping you maintain a healthy, confident smile for years to come.</p>
+            <p className="mt-6 text-center leading-relaxed text-muted">Visit AVM Smiles in Puducherry for comprehensive dental care tailored to your needs. We look forward to welcoming you and helping you maintain a healthy, confident smile for years to come.</p>
           </Reveal>
         </div>
       </section>
@@ -89,7 +89,7 @@ export function GalleryPage() {
     <>
       <PageHero
         title="Gallery"
-        text="Browse the AVM Smiles gallery in Chidambaram to view our clinic interiors, dental facilities, and patient-friendly environment. Our gallery showcases our focus on quality dental care and creating a comfortable experience for every smile."
+        text="Browse the AVM Smiles gallery in Puducherry to view our clinic interiors, dental facilities, and patient-friendly environment. Our gallery showcases our focus on quality dental care and creating a comfortable experience for every smile."
       />
       <section className="py-14 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 sm:px-6 md:grid-cols-3">
@@ -127,7 +127,7 @@ export function ThankYouPage() {
         <span className="rise mx-auto grid h-20 w-20 place-items-center rounded-full bg-brand-50 text-brand-600"><Icon name="CircleCheck" size={40} /></span>
         <h1 className="rise mt-6 text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.15] text-brand-900" style={{ '--d': '100ms' }}>Thank You!</h1>
         <p className="rise mt-4 leading-relaxed text-muted" style={{ '--d': '200ms' }}>
-          Your appointment request has been received. Our team at AVM Smiles, Chidambaram will contact you shortly to confirm your appointment.
+          Your appointment request has been received. Our team at AVM Smiles, Puducherry will contact you shortly to confirm your appointment.
         </p>
         <div className="rise mt-8 flex flex-wrap justify-center gap-3" style={{ '--d': '300ms' }}>
           <Btn variant="primary" href="/">Back to Home</Btn>
