@@ -17,5 +17,11 @@
     "metaDescription": "Thank you for booking with AVM Smiles in Puducherry. Our team will contact you shortly to confirm your appointment.",
     "metaKeywords": "AVM Smiles Puducherry, dental appointment",
     "noindex": true
+  },
+  "services": {
+    "slug": "services",
+    "metaTitle": "Dental Services in Puducherry | AVM Smiles",
+    "metaDescription": "Explore dental services at AVM Smiles Puducherry: tooth extraction, crowns and bridges, dentures, root canal, whitening, scaling, aligners, braces, veneers and dental implants.",
+    "metaKeywords": "dental services Puducherry, dental treatments Puducherry, dental implants Puducherry, invisible aligners Puducherry, AVM Smiles"
   }
 }

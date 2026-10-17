@@ -21,7 +21,7 @@ export const clinic = {
 export const nav = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/#about' },
-  { label: 'Services', href: '/#services', dropdown: true },
+  { label: 'Services', href: '/services', dropdown: true },
   { label: 'Smile Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact-us' },
 ]

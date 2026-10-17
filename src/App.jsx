@@ -9,8 +9,10 @@ import { ContactPage, GalleryPage, ThankYouPage } from './pages/StaticPages'
 function ScrollManager() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
-    if (hash) {
-      const t = setTimeout(() => document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' }), 60)
+    // /services is the landing page scrolled to its Services section
+    const target = hash || (pathname === '/services' ? '#services' : '')
+    if (target) {
+      const t = setTimeout(() => document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' }), 60)
       return () => clearTimeout(t)
     }
     window.scrollTo(0, 0)
@@ -31,6 +33,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Landing {...shared} />} />
+          <Route path="/services" element={<Landing {...shared} />} />
           <Route path="/contact-us" element={<ContactPage {...shared} />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/thankyou" element={<ThankYouPage />} />
