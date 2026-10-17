@@ -83,28 +83,51 @@ function Cards({ groups, numbered }) {
 function Table({ rows }) {
   const [head, ...rest] = rows
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
-      {rest.map((r, i) => (
-        <Reveal key={r[0]} delay={(i % 2) * 80}>
-          <div className="group h-full rounded-[20px] border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_48px_-16px_rgba(40,36,89,.3)]">
-            <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600 transition-colors duration-300 group-hover:bg-brand-600 group-hover:text-white">
-                <Icon name="Sparkles" size={20} />
-              </span>
-              <h3 className="font-semibold leading-snug text-brand-900">{r[0]}</h3>
-            </div>
-            <dl className="mt-4 grid grid-cols-2 gap-3 text-sm">
+    <Reveal>
+      {/* phones: one card per feature */}
+      <div className="grid gap-3 sm:hidden">
+        {rest.map((r) => (
+          <div key={r[0]} className="rounded-2xl border border-line bg-white p-4">
+            <h3 className="font-semibold text-brand-900">{r[0]}</h3>
+            <dl className="mt-3 grid grid-cols-2 gap-2 text-sm">
               {r.slice(1).map((c, k) => (
-                <div key={k} className={`rounded-2xl px-4 py-3 ${k === 0 ? 'bg-brand-50' : 'bg-surface'}`}>
+                <div key={k} className={`rounded-xl px-3 py-2 ${k === 0 ? 'bg-brand-50' : 'bg-surface'}`}>
                   <dt className="text-xs font-semibold text-brand-600">{head[k + 1]}</dt>
-                  <dd className="mt-1 text-ink">{c}</dd>
+                  <dd className="mt-0.5 text-ink">{c}</dd>
                 </div>
               ))}
             </dl>
           </div>
-        </Reveal>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      {/* tablet and up: comparison table */}
+      <div className="hidden overflow-hidden rounded-[24px] border border-line bg-white shadow-[0_18px_48px_-24px_rgba(40,36,89,.3)] sm:block">
+        <table className="w-full table-fixed border-collapse text-left text-sm">
+          <colgroup>
+            <col className="w-[34%]" />
+            {head.slice(1).map((h) => <col key={h} />)}
+          </colgroup>
+          <thead>
+            <tr className="bg-brand-700 text-white">
+              {head.map((h, i) => (
+                <th key={h} scope="col" className={`px-5 py-4 text-xs font-semibold uppercase tracking-wider ${i === 1 ? 'bg-brand-600' : ''}`}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rest.map((r) => (
+              <tr key={r[0]} className="border-t border-line even:bg-surface/60">
+                <th scope="row" className="px-5 py-4 align-top font-semibold text-brand-900">{r[0]}</th>
+                {r.slice(1).map((c, k) => (
+                  <td key={k} className={`px-5 py-4 align-top leading-snug ${k === 0 ? 'bg-brand-50/70 font-medium text-brand-700' : 'text-muted'}`}>{c}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Reveal>
   )
 }
 
