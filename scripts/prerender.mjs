@@ -1,3 +1,4 @@
+/* global process */
 // Writes dist/<slug>/index.html for each service page with that page's own
 // <title>, description, keywords, canonical and social tags, so crawlers that do not run
 // JavaScript see the correct meta data instead of the homepage's.
@@ -18,7 +19,7 @@ const setTag = (html, re, replacement) => {
 }
 
 for (const p of Object.values(pages)) {
-  const url = `https://avmsmilesdental.com/${p.slug}`
+  const url = `https://avmsmilesdental.com${(process.env.VITE_BASE || '/').replace(/\/$/, '')}/${p.slug}`
   let h = template
   h = setTag(h, /<title>.*?<\/title>/s, `<title>${esc(p.metaTitle)}</title>`)
   h = setTag(h, /<meta name="description" content="[^"]*"/, `<meta name="description" content="${esc(p.metaDescription)}"`)

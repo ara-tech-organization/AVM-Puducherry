@@ -1,11 +1,11 @@
 // Builds the site for Hostinger (Apache static hosting) into ./dist.
-//   npm run build:hostinger                  -> site served at the domain root  (https://domain/)
-//   npm run build:hostinger -- /puducherry/  -> site served from a sub-folder   (https://domain/puducherry/)
+//   npm run build:hostinger                  -> https://avmsmilesdental.com/puducherry/  (default)
+//   npm run build:hostinger -- /             -> site served at the domain root
 // Upload the CONTENTS of dist (including the hidden .htaccess) to public_html (or that sub-folder).
 import { spawnSync } from 'node:child_process'
 import fs from 'node:fs'
 
-let base = process.argv[2] || '/'
+let base = process.argv[2] || '/puducherry/'
 if (base.includes(':')) {
   // Git Bash rewrites a leading "/" into a Windows path; use PowerShell/cmd or quote it: MSYS_NO_PATHCONV=1
   console.error(`Bad base "${base}". Run from PowerShell/cmd, or prefix with MSYS_NO_PATHCONV=1 in Git Bash.`)

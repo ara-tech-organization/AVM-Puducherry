@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Icon, Btn, Reveal, Photo, A } from '../components/ui'
 import BookingForm from '../components/BookingForm'
-import { Gallery as BeforeAfter } from '../components/Sections'
+import { Gallery as BeforeAfter, Services, BookSection } from '../components/Sections'
 import { clinic, gallerySlots } from '../content/puducherry'
 import { useSeo } from '../lib/seo'
 import meta from '../content/static-pages.json'
@@ -135,5 +135,19 @@ export function ThankYouPage() {
         </div>
       </div>
     </section>
+  )
+}
+
+export function ServicesPage({ treatment, setTreatment }) {
+  useSeo(seo.services)
+  return (
+    <>
+      <PageHero
+        title="Our Dental Services"
+        text="From routine checkups to complete smile makeovers, explore the dental treatments available at AVM Smiles Puducherry."
+      />
+      <Services onPick={setTreatment} />
+      <BookSection treatment={treatment} setTreatment={setTreatment} />
+    </>
   )
 }

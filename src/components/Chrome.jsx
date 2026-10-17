@@ -1,6 +1,5 @@
-﻿import { useContext, useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router'
-import { ActiveSection, landingPaths } from '../lib/spy'
 import { asset } from '../lib/asset'
 import { Icon, Btn, A } from './ui'
 import { clinic, nav, services } from '../content/puducherry'
@@ -21,14 +20,11 @@ export function TopBar() {
   )
 }
 
-// Menu item that matches the current page (or, on the landing page, the section in view).
+// Menu item that matches the current page; service pages count as "Services".
 function useIsActive() {
   const { pathname } = useLocation()
-  const section = useContext(ActiveSection)
-  const onLanding = landingPaths.includes(pathname)
-  const key = onLanding ? `/${section === 'home' ? '' : section}` : pathname
-  const isService = !onLanding && !['/gallery', '/contact-us', '/thankyou'].includes(pathname)
-  return (href) => (href === '/services' && isService) || href === key
+  const isService = !['/', '/services', '/gallery', '/contact-us', '/thankyou'].includes(pathname)
+  return (href) => href === pathname || (href === '/services' && isService)
 }
 
 export function Header() {

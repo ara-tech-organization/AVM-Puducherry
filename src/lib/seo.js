@@ -21,7 +21,7 @@ export function useSeo(page) {
       setMeta('meta[property="og:title"]', 'content', page.metaTitle),
       setMeta('meta[property="og:description"]', 'content', page.metaDescription),
       setMeta('meta[name="twitter:title"]', 'content', page.metaTitle),
-      setMeta('link[rel="canonical"]', 'href', `https://avmsmilesdental.com${page.path}`),
+      setMeta('link[rel="canonical"]', 'href', `https://avmsmilesdental.com${import.meta.env.BASE_URL.replace(/\/$/, '')}${page.path}`),
     ]
     return () => {
       document.title = prevTitle
