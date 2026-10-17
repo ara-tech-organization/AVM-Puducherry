@@ -108,7 +108,7 @@ export default function BookingForm({ id, treatment, setTreatment, dark = false 
   }
 
   return (
-    <form id={id} onSubmit={submit} noValidate className={`rounded-3xl p-6 sm:p-8 ${dark ? 'bg-white' : 'bg-white'} shadow-[0_18px_48px_-16px_rgba(40,36,89,.35)] border border-line`}>
+    <form id={id} onSubmit={submit} noValidate className={`@container rounded-3xl p-6 sm:p-8 ${dark ? 'bg-white' : 'bg-white'} shadow-[0_18px_48px_-16px_rgba(40,36,89,.35)] border border-line`}>
       <h3 className="text-lg font-semibold text-brand-900 flex items-center gap-2">
         <Icon name="CalendarCheck" className="text-accent" /> Schedule Your Appointment
       </h3>
@@ -123,7 +123,7 @@ export default function BookingForm({ id, treatment, setTreatment, dark = false 
           <input id={`${id}-phone`} className={field} placeholder="10-digit mobile number" inputMode="tel" value={form.phone} onChange={set('phone')} autoComplete="tel" aria-invalid={!!errors.phone} />
           {errors.phone && <p className="mt-1 text-xs text-accent flex items-center gap-1"><Icon name="CircleAlert" size={14} />{errors.phone}</p>}
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 @md:grid-cols-2">
           <div>
             <label htmlFor={`${id}-date`} className="mb-1.5 block text-xs font-medium text-muted">Preferred Date</label>
             <input id={`${id}-date`} type="date" className={field} value={form.date} onChange={set('date')} min={new Date().toISOString().slice(0, 10)} />
